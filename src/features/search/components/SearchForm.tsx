@@ -65,7 +65,7 @@ export function SearchForm() {
           </Select>
         </div>
 
-        <div className="flex gap-2 justify-end">
+        <div className="flex flex-wrap gap-2 justify-between md:justify-end">
           <button
             type="button"
             onClick={() => setShowAdvanced((prev) => !prev)}

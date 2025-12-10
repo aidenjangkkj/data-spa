@@ -23,9 +23,9 @@ export function TrademarkListItem({ item, onClick }: TrademarkListItemProps) {
   const displayName = item.nameKo ?? item.nameEn;
 
   return (
-    <li className="flex items-start justify-between gap-4 rounded-lg border bg-white p-4 shadow-sm">
+    <li className="flex flex-col gap-3 rounded-lg border bg-white p-4 shadow-sm sm:flex-row sm:items-start sm:justify-between sm:gap-4">
       <div className="space-y-1">
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <h3 className="text-sm font-semibold">{displayName}</h3>
           <Badge variant={statusToBadgeVariant(item.registerStatus)}>
             {item.registerStatus}
@@ -34,7 +34,7 @@ export function TrademarkListItem({ item, onClick }: TrademarkListItemProps) {
             {item.country}
           </span>
         </div>
-        <p className="text-xs text-slate-500">
+        <p className="text-xs text-slate-500 leading-relaxed">
           출원번호 {item.applicationNumber} · 출원일 {item.applicationDate}
         </p>
         {item.mainClassCodes.length > 0 && (
@@ -44,8 +44,7 @@ export function TrademarkListItem({ item, onClick }: TrademarkListItemProps) {
         )}
       </div>
 
-      <div className="flex flex-col items-end gap-2">
-        {/* 여기만 변경 */}
+      <div className="flex flex-row items-center justify-between gap-3 sm:flex-col sm:items-end">
         <button
           type="button"
           aria-label="즐겨찾기"
@@ -60,7 +59,12 @@ export function TrademarkListItem({ item, onClick }: TrademarkListItemProps) {
           {isFavorite ? "★" : "☆"}
         </button>
 
-        <Button type="button" variant="secondary" onClick={onClick}>
+        <Button
+          type="button"
+          variant="secondary"
+          className="w-full sm:w-auto"
+          onClick={onClick}
+        >
           상세보기
         </Button>
       </div>
