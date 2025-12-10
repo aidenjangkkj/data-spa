@@ -1,7 +1,7 @@
 import type { SelectHTMLAttributes } from "react";
 import clsx from "clsx";
 
-export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {}
+export type SelectProps = SelectHTMLAttributes<HTMLSelectElement>;
 
 export function Select({ className, children, ...rest }: SelectProps) {
   return (

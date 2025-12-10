@@ -34,9 +34,9 @@ export function DateRangePicker({
       <label className="mb-1 block text-xs font-medium text-slate-600">
         {label}
       </label>
-      <div className="flex items-center gap-2">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-2">
         <Input type="date" value={from ?? ""} onChange={handleFromChange} />
-        <span className="text-xs text-slate-400">~</span>
+        <span className="text-center text-xs text-slate-400 sm:w-4">~</span>
         <Input type="date" value={to ?? ""} onChange={handleToChange} />
       </div>
     </div>

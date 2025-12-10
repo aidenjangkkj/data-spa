@@ -21,9 +21,9 @@ export function CountryTabs() {
   const tabBase = "px-3 py-1.5 text-xs md:text-sm rounded-md transition-colors";
 
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
       {/* 탭 그룹 */}
-      <div className="inline-flex gap-1 rounded-md border bg-white p-1 text-sm">
+      <div className="inline-flex w-full flex-wrap gap-1 rounded-md border bg-white p-1 text-sm sm:w-auto">
         <button
           type="button"
           className={clsx(
@@ -62,7 +62,7 @@ export function CountryTabs() {
         </button>
       </div>
 
-      <p className="hidden text-xs text-slate-500 md:block">
+      <p className="text-xs text-slate-500 sm:text-[11px] md:text-xs">
         즐겨찾기는 현재 선택된 국가의 상표 중에서만 필터링됩니다.
       </p>
     </div>

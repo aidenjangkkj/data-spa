@@ -70,7 +70,6 @@ export function TrademarkList() {
     if (viewMode === "FAVORITES") {
       setFavoriteFilter("ALL");
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params.country, viewMode]);
 
   // viewMode + 국가에 따라 베이스 데이터 결정
